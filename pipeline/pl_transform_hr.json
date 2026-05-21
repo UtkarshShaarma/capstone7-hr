@@ -1,0 +1,40 @@
+{
+	"name": "pl_transform_hr",
+	"properties": {
+		"activities": [
+			{
+				"name": "Run_Orchestrator",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Shared/hr_capstone/00_orchestrator"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"run_id": {
+				"type": "string",
+				"defaultValue": "@pipeline().RunId"
+			},
+			"run_date": {
+				"type": "string",
+				"defaultValue": "@pipeline().parameters.run_date"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2026-05-21T10:48:03Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

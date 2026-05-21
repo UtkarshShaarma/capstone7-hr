@@ -1,0 +1,72 @@
+{
+	"name": "ds_sql_audit",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sqlDB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "run_id",
+				"type": "varchar"
+			},
+			{
+				"name": "pipeline_name",
+				"type": "varchar"
+			},
+			{
+				"name": "source_name",
+				"type": "varchar"
+			},
+			{
+				"name": "load_type",
+				"type": "varchar"
+			},
+			{
+				"name": "start_time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "end_time",
+				"type": "datetime2",
+				"scale": 7
+			},
+			{
+				"name": "records_read",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "records_inserted",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "records_updated",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "records_rejected",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "status",
+				"type": "varchar"
+			},
+			{
+				"name": "error_message",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "pipeline_audit"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

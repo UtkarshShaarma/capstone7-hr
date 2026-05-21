@@ -1,0 +1,15 @@
+{
+	"name": "adf-capstone-hr-ups",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "80d06851-199c-4a7a-ba27-4840ec8789d7",
+		"tenantId": "e0275bc0-33e3-4f43-8688-64d5b044a431"
+	}
+}
