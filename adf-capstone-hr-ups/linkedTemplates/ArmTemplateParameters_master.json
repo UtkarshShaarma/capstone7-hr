@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-capstone-hr-ups"
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "0521-045424-40zathnm"
+		},
+		"LS_ADLS_properties_typeProperties_url": {
+			"value": "https://stcapstonehr1123.dfs.core.windows.net/"
+		},
+		"LS_keyVault_properties_typeProperties_baseUrl": {
+			"value": "https://kv-capstone-hr-ups.vault.azure.net/"
+		},
+		"LS_sqlDB_properties_typeProperties_server": {
+			"value": "sql-capstone-hr-ups.database.windows.net"
+		},
+		"LS_sqlDB_properties_typeProperties_database": {
+			"value": "hrdb"
+		},
+		"LS_sqlDB_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
